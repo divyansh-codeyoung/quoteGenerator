@@ -51,14 +51,14 @@ async function getQuote(){
             quoteText.classList.remove('long-quote')
         }
         quoteText.innerText = data.quoteText;
-
+        
         //stop loader and show quote
         done();
     } catch(error){
             console.log('OMG ', error);
             errCount++;
             if(errCount>10){
-                document.alert("Oops! Techincal glitch from API call, please refresh.")
+                alert("Oops! Techincal glitch from API call, please refresh. Please gain CORS access. Check the footer !")
             }
             else{
                 getQuote();
